@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 9rem;
     background-color: white;
     position: sticky;
     top: 0;
@@ -89,10 +89,101 @@ body {
   }
   
 /* HOMEPAGE */
+.homeBody {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5rem 9rem;
+  max-width: 1500px; /* or whatever width works */
+  margin: 0 auto;
+}
+
+.homeLeft {
+  flex: 2;
+  min-width: 280px;
+  padding: 5rem 2rem;
+
+}
+
+.homeLeft h1.highlight {
+  color: #CAB0FF; /* your lavender */
+  font-size: 7rem;
+  font-family: "Passion One", sans-serif;
+}
+
+.homeLeft h4 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', serif;
+}
+
+.homeLeft h5 {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  font-family: 'Poppins', serif;
+}
+
+/* Headshot flip animation */
+.homeRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+}
+
+.flip {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Required for 3D flip */
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
 
 .headshot {
-    border-radius: 50%;
-    width: 350px;
-    height: 350px
-      
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 4px solid #b48eff;
 }
+
+
+/* TypeWriter Animation */
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  color: #CAB0FF;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+

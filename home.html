@@ -12,7 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
         <!-- Making it mobile phone friendly -->
         <meta name = "viewport" content = "width=device-width, intial-scale=1">
 
@@ -40,14 +40,67 @@
         <!-- Main Part of Home Page -->
         <div class = "homeBody"> 
             <div class = "homeLeft">
-
+                <h4>Hello World, I'm</h4>
+                <h1 class="highlight">PRISHA SHETH</h2>
+                <h4><span id="typewriter"></span><span class="cursor">|</span></h4>
+                <h5>welcome to my personal website 👑 </h4>
             </div>
 
             <div class = "homeRight">
-                <img class = "headshot" src="https://bkacontent.com/wp-content/uploads/2016/06/Depositphotos_31146757_l-2015.jpg">
+                <div class = "flip">
+                    <div class="inner">
+                        <div class="front">
+                            <img class = "headshot" src="https://bkacontent.com/wp-content/uploads/2016/06/Depositphotos_31146757_l-2015.jpg">
+                        </div>
+                        <div class="back">
+                            <img class = "headshot" src="https://img.freepik.com/premium-vector/cute-small-baby-cartoon-character-adorable-cheerful-little-boy_144356-108022.jpg">
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
 
     </body>
 </html>
+
+<script>
+const phrases = [
+  "Sophomore @ Harvard",
+  "Computer Science + Economics",
+  "Software Engineer/PM",
+  "Harvard 2028"
+];
+
+const typewriter = document.getElementById("typewriter");
+let phraseIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function type() {
+  const currentPhrase = phrases[phraseIndex];
+
+  if (typing) {
+    if (charIndex < currentPhrase.length) {
+      typewriter.textContent += currentPhrase.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 75);
+    } else {
+      typing = false;
+      setTimeout(type, 500); // Pause at end
+    }
+  } else {
+    if (phraseIndex === phrases.length - 1) return; // Stop on last phrase
+    if (charIndex > 0) {
+      typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(type, 40);
+    } else {
+      typing = true;
+      phraseIndex++;
+      setTimeout(type, 500);
+    }
+  }
+}
+
+type();
+</script>
