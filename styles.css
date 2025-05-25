@@ -1,0 +1,98 @@
+/* BACKGROUND */
+body {
+    background-color: #ffffff;
+}
+
+/* NAVIGATION BAR */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: "Passion One", sans-serif;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    --b: 0.1em;   /* the thickness of the line */
+    --c: #8962d8; /* the color */
+    
+    color: #CAB0FF;
+    padding-block: var(--b);
+    background: 
+      linear-gradient(var(--c) 50%,#8962d8 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .2s var(--_s,0s) linear,background-size .2s calc(.2s - var(--_s,0s));
+  }
+
+  .logo:hover {
+    --_p: 100%;
+    --_s: .2s;
+    color: #8962d8
+  }  
+
+  .navigation {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #E7DBFF;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  .navigation a:hover {
+    transform: scale(1.3);
+  }
+  
+  .navigation .selected {
+    color: #CAB0FF;
+  }
+  
+  .navigation .selected::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #CAB0FF;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 1.7rem;
+  }
+  
+  .socials a {
+    color: #CAB0FF;
+    font-size: 1.4rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .socials a:hover {
+    transform: scale(1.3);
+    color: #8962d8
+  }
+  
+/* HOMEPAGE */
+
+.headshot {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px
+      
+}
