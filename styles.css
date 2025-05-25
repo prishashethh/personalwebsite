@@ -134,8 +134,8 @@ body {
 
 .flip {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 370px;
   perspective: 1000px; /* Required for 3D flip */
 }
 
@@ -187,3 +187,48 @@ body {
   50% { opacity: 0; }
 }
 
+/* ABOUT ME */
+.aboutMe {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+.aboutCard {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f1e8ff;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1150px;
+  width: 100%;
+  gap: 2rem;
+  align-items: center;
+}
+
+.aboutLeft {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutPic {
+  width: 370px;
+  height: 480px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.aboutRight {
+  flex: 2;
+  font-family: 'Poppins', serif;
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+}
+
+.aboutHeader {
+  color: #CAB0FF;
+  font-family: "Passion One", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
