@@ -1,7 +1,17 @@
-/* BACKGROUND */
+/* GENERAL */
 body {
     background-color: #ffffff;
 }
+
+.SubTitle {
+  color: #CAB0FF;
+  font-family: "Passion One", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  padding: 2rem 9rem;
+}
+
+
 
 /* NAVIGATION BAR */
 .topBar {
@@ -235,14 +245,6 @@ body {
 }
 
 /* About Me Skills */
-.SubTitle {
-  color: #CAB0FF;
-  font-family: "Passion One", sans-serif;
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  padding: 2rem 9rem;
-}
-
 .skills .skillsBoxes {
   padding: 0rem 9rem;
   display: flex;
@@ -305,7 +307,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.4;
     transform: scale(0.95);
 }
 
@@ -376,4 +378,111 @@ body {
 .carousel-card:hover {
     opacity: 0.6;
     transform: scale(1);
+}
+
+/* EXPERIENCES */
+/* Projects Container */
+.projectBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 2rem;
+  margin: 1rem auto 4rem;
+  max-width: 1150px;
+}
+
+.project {
+  background-color: #f1e8ff;
+  border-radius: 1rem;
+  flex: 1 1 300px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project img {
+  width: 95%;
+  border-radius: 1rem;
+  height: 200px;
+  align-self: center;
+  margin-top: 7px;
+}
+
+.projectTitle {
+  margin: 1rem;
+  font-size: 2.2rem;
+  font-family: 'Passion One', sans-serif;
+  color: #CAB0FF;
+}
+
+.project p {
+  margin: 0 1rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.languages span {
+  background: #cab0ff;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.projectLink {
+  position: relative;
+  font-family: 'Source Code Pro', monospace;
+  background: #cab0ff;
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  width: 150px;
+  text-align: center;
+  overflow: hidden;
+  display: block;       
+  margin: 1rem auto;  
+
+}
+
+/* Position SVG to fill the link */
+.projectLink svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+}
+
+/* Initial rect style */
+.projectLink svg rect {
+  fill: none;
+  stroke: #8962d8;
+  stroke-width: 4;
+  stroke-dasharray: 422;       
+  stroke-dashoffset: 422; 
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.projectLink:hover {
+  color: black;
+  text-decoration: none;
+}
+.projectLink:hover svg rect {
+  stroke-dashoffset: 0;
 }
