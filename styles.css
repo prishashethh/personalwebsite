@@ -11,8 +11,6 @@ body {
   padding: 2rem 9rem;
 }
 
-
-
 /* NAVIGATION BAR */
 .topBar {
     display: flex;
@@ -263,7 +261,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   color: #222;
-  width: 270px;
+  width: 260px;
   height: 110px;
   box-sizing: border-box;
   transition: background-color 0.2s ease;
@@ -381,7 +379,8 @@ body {
 }
 
 /* EXPERIENCES */
-/* Projects Container */
+
+/* Projects */
 .projectBoxes {
   display: flex;
   flex-wrap: wrap;
@@ -396,7 +395,7 @@ body {
   background-color: #f1e8ff;
   border-radius: 1rem;
   flex: 1 1 300px;
-  max-width: 320px;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -459,7 +458,6 @@ body {
 
 }
 
-/* Position SVG to fill the link */
 .projectLink svg {
   position: absolute;
   top: 0;
@@ -469,7 +467,6 @@ body {
   pointer-events: none; 
 }
 
-/* Initial rect style */
 .projectLink svg rect {
   fill: none;
   stroke: #8962d8;
@@ -485,4 +482,209 @@ body {
 }
 .projectLink:hover svg rect {
   stroke-dashoffset: 0;
+}
+
+/* Work Experiences */
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 2rem 9rem 4rem;
+  padding-left: 2rem;
+  border-left: 4px solid #CAB0FF;
+}
+
+/* Each entry */
+.timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+/* The purple dot */
+.timeline-dot {
+  position: absolute;
+  left: -42px;               /* half the dot’s width + border */
+  top: 0.6rem;               /* tweak to vertically center on the text */
+  width: 16px;
+  height: 16px;
+  background-color: #CAB0FF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fff; /* white ring around the dot */
+}
+
+.timeline-content {
+  max-width: 75%;
+}
+
+.timeline-content h3 {
+  font-family: "Passion One", sans-serif;
+  color: #CAB0FF;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+
+.timeline-content p {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.timeline-date {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #222;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* right-hand column: date on top, link below */
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;              /* space between date & link */
+}
+
+/* copy-pasta from your .projectLink, but flat selectors */
+.workLink {
+  position: relative;
+  display: inline-block;
+  font-family: 'Source Code Pro', monospace;
+  background: #cab0ff;
+  color: black;
+  text-decoration: none;
+  padding: 0.4rem;
+  width: 150px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* SVG overlay for the animated border */
+.workLink svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* initial (hidden) stroke */
+.workLink svg rect {
+  fill: none;
+  stroke: #8962d8;
+  stroke-width: 4;
+  stroke-dasharray: 422;
+  stroke-dashoffset: 422;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.workLink:hover svg rect {
+  stroke-dashoffset: 0;
+}
+
+.workLink:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* SCREEN SIZES */
+body {
+  padding: 0 1rem;
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .SubTitle { font-size: 2.5rem; padding: 1rem 0; }
+  .topBar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0;
+  }
+  .navigation { 
+    display: none;            
+  }
+  .socials { justify-content: center; margin-top: .5rem; }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+  /* Home page */
+  .homeBody {
+    flex-direction: column;
+    padding: 2rem 0;           
+  }
+  .homeLeft, .homeRight {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .homeLeft h1.highlight { font-size: 3.5rem; }
+  .homeLeft h4 { font-size: 1.6rem; }
+  .homeLeft h5 { font-size: 1rem; }
+
+  /* About page */
+  .aboutCard {
+    flex-direction: column;    
+    padding: 1rem;
+  }
+  .aboutPic {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Skills chips */
+  .skills .skillsBoxes {
+    justify-content: center;
+    padding: 0 1rem;          
+  }
+  .chip {
+    flex: 1 1 45%;
+    max-width: none;
+    font-size: 1rem;
+  }
+
+  /* Courses carousel */
+  .carousel-container {
+    padding: 2rem 1rem;        
+  }
+  .carousel-card {
+    flex: 0 0 200px;           
+  }
+
+  /* Projects: stack cards */
+  .projectBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    height: 100%;
+  }
+  .project {
+    margin: 0 auto;
+  }
+
+  /* Timeline items: stack content + meta */
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem;
+  }
+  .timeline-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0.2rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 1024px) {
+  .SubTitle { font-size: 3rem; padding: 1.5rem 0; }
+  .topBar { padding: 1rem 2rem; }
+  .homeBody { padding: 3rem 2rem; }
 }
