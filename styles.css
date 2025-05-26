@@ -398,8 +398,9 @@ body {
   max-width: 340px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .project img {
@@ -408,6 +409,7 @@ body {
   height: 200px;
   align-self: center;
   margin-top: 7px;
+  object-fit: cover;
 }
 
 .projectTitle {
@@ -505,7 +507,7 @@ body {
 /* The purple dot */
 .timeline-dot {
   position: absolute;
-  left: -42px;               /* half the dot’s width + border */
+  left: -42px;               /* half the dot's width + border */
   top: 0.6rem;               /* tweak to vertically center on the text */
   width: 16px;
   height: 16px;
@@ -662,10 +664,20 @@ body {
     flex-direction: column;
     gap: 2rem;
     padding: 0 1rem;
-    height: 100%;
   }
   .project {
     margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  .project img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+  .languages {
+    justify-content: center;
+    padding: 0 1rem;
   }
 
   /* Timeline items: stack content + meta */
@@ -680,6 +692,12 @@ body {
     gap: 0.5rem;
     margin-left: 0.2rem;
     align-items: flex-start;
+  }
+
+  .timeline {
+    margin: 1.5rem 0 2rem 1.5rem;
+    padding-left: 0.7rem;
+    border-left-width: 3px;
   }
 }
 
