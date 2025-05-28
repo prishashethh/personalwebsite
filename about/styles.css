@@ -639,7 +639,7 @@ body {
     padding: 1rem 0;
   }
   .navigation { 
-    display: none;            
+    margin-left: 0px;            
   }
   .socials { justify-content: center; margin-top: .5rem; }
 }
