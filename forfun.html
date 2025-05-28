@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -45,7 +44,15 @@
                 who I am beyond work. </p>
         </div>
 
-        <div class = "photoDumps">
+        <!-- Vertical Navigation -->
+        <div class="vertical-nav">
+            <a href="#photos" class="nav-item">Photos</a>
+            <a href="#connect" class="nav-item">Connect</a>
+            <a href="#socials" class="nav-item">Socials</a>
+            <a href="#fun-quiz" class="nav-item">Quiz</a>
+        </div>
+
+        <div id="photos" class = "photoDumps">
             <h1 class="SubTitle"> ━━ Semester Photos</h1>
 
             <div class = "howMany">
@@ -161,7 +168,7 @@
     });
     </script>
 
-    <h1 class="SubTitle"> ━━ Let's Connect!</h1>
+    <h1 id="connect" class="SubTitle"> ━━ Let's Connect!</h1>
     <div class = "contact">
         <form action="https://api.web3forms.com/submit" method="POST">
 
@@ -174,7 +181,7 @@
         </form>
     </div>
 
-    <h1 class="SubTitle"> ━━ More Socials</h1>
+    <h1 id="socials" class="SubTitle"> ━━ More Socials</h1>
 
     <div class = "icons">
         <div class = "rowOne">
@@ -203,5 +210,48 @@
         });
       </script>
       
+    <h1 class="SubTitle">━━ Random Quiz </h1>
+    <!-- QUIZ SECTION -->
+    <div id="fun-quiz" class="quiz-section">
+      <form id="prishaQuiz">
+        <div class="quiz-question">
+          <label for="q1">1. What is Prisha's favorite color?</label>
+          <input type="text" id="q1" name="q1" class="quiz-input" autocomplete="off">
+          <div class="quiz-feedback" id="q1-feedback"></div>
+        </div>
+        <div class="quiz-question">
+          <label for="q2">2. What is the name of Prisha's hometown city?</label>
+          <input type="text" id="q2" name="q2" class="quiz-input" autocomplete="off">
+          <div class="quiz-feedback" id="q2-feedback"></div>
+        </div>
+        <div class="quiz-question">
+          <label for="q3">3. What is Prisha's favorite food?</label>
+          <input type="text" id="q3" name="q3" class="quiz-input" autocomplete="off">
+          <div class="quiz-feedback" id="q3-feedback"></div>
+        </div>
+        <div class="quiz-question">
+          <label for="q4">4. Where is Prisha's dream travel location?</label>
+          <input type="text" id="q4" name="q4" class="quiz-input" autocomplete="off">
+          <div class="quiz-feedback" id="q4-feedback"></div>
+        </div>
+        <div class="quiz-question">
+          <label for="q5">5. What type of animal is Prisha's oldest stuffed animal? </label>
+          <input type="text" id="q5" name="q5" class="quiz-input" autocomplete="off">
+          <div class="quiz-feedback" id="q5-feedback"></div>
+        </div>
+        <div class="quiz-buttons">
+          <button type="submit" class="quiz-submit">Submit</button>
+          <button type="button" class="quiz-reset">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="quiz-success" class="quiz-success" style="display:none;"></div>
+
+    <p class = "extraNotes">Designed in Figma and coded in Visual Studio Code by yours truly. Built with vanilla JavaScript, CSS, HTML, with Bootstrap and icons from Font Awesome. Domain is purchased from Google Domains and all text is written in Poppins, Source Code, and Passion One.</p>
+
+    <!-- Add the following script just before </body> -->
+    <script src="quiz.js"></script>
+
     </body>
 </html>
