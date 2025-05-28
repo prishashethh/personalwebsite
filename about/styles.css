@@ -638,9 +638,6 @@ body {
     align-items: stretch;
     padding: 1rem 0;
   }
-  .navigation { 
-    margin-left: 0px;            
-  }
   .socials { justify-content: center; margin-top: .5rem; }
 }
 
