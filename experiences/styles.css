@@ -1099,3 +1099,7 @@ html {
   width: 100%;
   margin: 2rem auto;
 }
+
+.project p {
+  font-family: 'Poppins', serif;
+}
