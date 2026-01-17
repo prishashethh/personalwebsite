@@ -815,9 +815,18 @@ body {
   display: block;
 }
 
+.mySlides3 {
+  display: none;
+}
+
+.mySlides3:first-of-type {
+  display: block;
+}
+
 /* Constrain image heights in slideshow for consistent sizing */
 .mySlides img,
-.mySlides2 img {
+.mySlides2 img,
+.mySlides3 img {
   height: 400px !important;
   width: 100% !important;
   object-fit: cover !important;
@@ -846,6 +855,12 @@ body {
 
 .slideshow-wrapper.right-align {
   justify-content: flex-end;
+}
+
+.slideshow-wrapper.center-align {
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
 }
 .slideshow-container {
   max-width: 600px;
