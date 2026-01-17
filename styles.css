@@ -814,6 +814,15 @@ body {
 .mySlides2:first-of-type {
   display: block;
 }
+
+/* Constrain image heights in slideshow for consistent sizing */
+.mySlides img,
+.mySlides2 img {
+  height: 400px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
 .slideshow-wrapper {
   flex: 1 1 50px;
   display: flex;
