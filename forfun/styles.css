@@ -1099,3 +1099,48 @@ html {
   width: 100%;
   margin: 2rem auto;
 }
+
+.songs-section {
+  max-width: 750px;
+  margin: .5rem auto;
+  padding: 2rem;
+  background-color: #f1e8ff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.spotify-wrapper iframe {
+  width: 100%;
+  display: block;
+}
+
+.spotify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #8962d8;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  border: 2px solid #CAB0FF;
+  transition: all 0.3s ease;
+}
+
+.spotify-link:hover {
+  background-color: #CAB0FF;
+  color: white;
+  border-color: #8962d8;
+  transform: scale(1.05);
+}
