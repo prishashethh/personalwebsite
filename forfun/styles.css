@@ -814,6 +814,33 @@ body {
 .mySlides2:first-of-type {
   display: block;
 }
+
+.mySlides3 {
+  display: none;
+}
+
+.mySlides3:first-of-type {
+  display: block;
+}
+
+.mySlides4 {
+  display: none;
+}
+
+.mySlides4:first-of-type {
+  display: block;
+}
+
+.mySlides img,
+.mySlides2 img,
+.mySlides3 img,
+.mySlides4 img {
+  height: 400px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
 .slideshow-wrapper {
   flex: 1 1 50px;
   display: flex;
