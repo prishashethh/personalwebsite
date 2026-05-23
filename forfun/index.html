@@ -51,16 +51,15 @@
             <a href="#connect" class="nav-item">Connect</a>
             <a href="#socials" class="nav-item">Socials</a>
             <a href="#songs" class="nav-item">Songs</a>
-            <a href="#fun-quiz" class="nav-item">Quiz</a>
+            <a href="#quiz" class="nav-item">Quiz</a>
         </div>
 
         <div id="photos" class = "photoDumps">
-            <h1 class="SubTitle"> ━━ Semester Photos</h1>
+            <div class="photos-main">
+            <h1 class="SubTitle">Semester Photos</h1>
 
-            <div class = "howMany">
-            <div class="slideshow-row">
-            <div class="slideshow-wrapper left-align">
-            <!-- Slideshow container -->
+            <div class="howMany photo-slideshow-grid">
+            <div class="slideshow-wrapper">
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
@@ -130,8 +129,7 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             </div>
-            <br>
-            <div class="slideshow-wrapper right-align">
+            <div class="slideshow-wrapper">
             <div class="slideshow-container" id="slideshow2">
                 <div class="mySlides2">
                   <div class="numbertext">1 / 10</div>
@@ -195,13 +193,8 @@
                 <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides2(1)">&#10095;</a>
               </div>
-            </div> 
-        </div>
-        </div>
-        <br>
-        <!-- Third and fourth slideshows side by side -->
-        <div class="slideshow-row">
-            <div class="slideshow-wrapper left-align">
+            </div>
+            <div class="slideshow-wrapper">
             <div class="slideshow-container" id="slideshow3">
                 <div class="mySlides3">
                   <div class="numbertext">1 / 10</div>
@@ -267,7 +260,7 @@
                 <a class="next" onclick="plusSlides3(1)">&#10095;</a>
               </div>
             </div>
-            <div class="slideshow-wrapper right-align">
+            <div class="slideshow-wrapper">
             <div class="slideshow-container" id="slideshow4">
                 <div class="mySlides4">
                   <div class="numbertext">1 / 10</div>
@@ -324,7 +317,7 @@
               </div>
             </div>
         </div>
-        </div>
+            </div>
         </div>
 
     <script>
@@ -448,7 +441,7 @@
     });
     </script>
 
-    <h1 id="connect" class="SubTitle"> ━━ Let's Connect!</h1>
+    <h1 id="connect" class="SubTitle">Let's Connect!</h1>
     <div class = "contact">
         <form action="https://api.web3forms.com/submit" method="POST">
 
@@ -461,7 +454,7 @@
         </form>
     </div>
 
-    <h1 id="socials" class="SubTitle"> ━━ More Socials</h1>
+    <h1 id="socials" class="SubTitle">More Socials</h1>
 
     <div class = "icons">
         <div class = "rowOne">
@@ -489,7 +482,7 @@
         });
       </script>
     
-    <h1 id="songs" class="SubTitle">━━ Songs</h1>
+    <h1 id="songs" class="SubTitle">Songs</h1>
     <div class="songs-section">
       <div class="spotify-wrapper">
         <iframe 
@@ -507,7 +500,7 @@
     </div>
 
   
-    <h1 class="SubTitle">━━ Random Quiz </h1>
+    <h1 id="quiz" class="SubTitle">Random Quiz</h1>
     <!-- QUIZ SECTION -->
     <div id="fun-quiz" class="quiz-section">
       <form id="prishaQuiz">
